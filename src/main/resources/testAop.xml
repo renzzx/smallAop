@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:myTag="http://www.rzzx.com/schema/myAop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.rzzx.com/schema/myAop http://www.rzzx.com/schema/myAop.xsd">
+       
+    <myTag:aspectj-autoproxy/>    
+    <bean id="testBean" class="com.rzzx.bean.Person"/>
+    <bean class="com.rzzx.aspect.AspectConfig"/>
+    <bean class="com.rzzx.aspect.AspectConfig2"/>
+</beans>        
